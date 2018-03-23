@@ -4,6 +4,8 @@
   "description": "Cron Mail For Myanmar Business",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bower install && grunt build",
+    "start": "nf start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,5 +18,8 @@
     "ejs": "^2.5.7",
     "express": "^4.16.3",
     "request": "^2.85.0"
+  },
+    "engines": {
+    "node": "8.9.1"
   }
 }
