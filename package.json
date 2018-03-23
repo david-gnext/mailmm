@@ -4,6 +4,7 @@
   "description": "Cron Mail For Myanmar Business",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm install express",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
