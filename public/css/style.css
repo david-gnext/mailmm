@@ -1,0 +1,19 @@
+fieldset {
+	border: 0;
+}
+form {
+	text-align: center;
+}
+.container {
+	width: 100%;
+}
+input,button {
+	width: 80%;
+	margin: auto;
+	padding:1rem 2.5rem;
+}
+button {
+	margin-top:2rem;
+	border: 1px solid cyan;
+	cursor: pointer;
+}
