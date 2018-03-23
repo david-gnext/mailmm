@@ -8,7 +8,7 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var User            = require('../app/models/users');
 
 // load the auth variables
-var configAuth = require('./auth');
+var configAuth = require('./auth').get(process.env.NODE_ENV);
 
 // expose this function to our app using module.exports
 module.exports = function(passport) {
