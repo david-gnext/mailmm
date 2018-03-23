@@ -2,7 +2,7 @@
   "name": "mailmm",
   "version": "1.0.0",
   "description": "Cron Mail For Myanmar Business",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "postinstall": "npm install express",
