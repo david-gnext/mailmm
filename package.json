@@ -17,9 +17,10 @@
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.3",
+    "foreman": "2.0.0",
     "request": "^2.85.0"
   },
-    "engines": {
+  "engines": {
     "node": "8.9.1"
   }
 }
