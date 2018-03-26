@@ -1,15 +1,65 @@
 <h1 class="text-center text-info text-cap title"><span class="fa fa-envelope"></span> Mailing your customer faster and easier </h1>
-<div class="container">
-    <div class="text-center row login-row">
-        <p>Login or Register with:</p>
-        <div class="col-md-4 col-sm-6 col-6">
-        <a href="/login" class="btn btn-default w-100"><span class="fa fa-user"></span> Local Login</a>
+<div class="container-fluid">
+    <div class="text-center row login-row my-5">
+        <div class="col-md-12 col-12"><p>Login or Register with:</p></div>
+        <div class="col-md-4 col-sm-12 col-12">
+        <a href="/login" class="btn btn-info w-100"><span class="fa fa-user"></span> Local Login</a>
         </div>
-        <div class="col-md-4 col-sm-6 col-6">
-        <a href="/signup" class="btn btn-default w-100"><span class="fa fa-user"></span> Local Signup</a>
+        <div class="col-md-4 col-sm-12 col-12">
+        <a href="/signup" class="btn btn-info w-100"><span class="fa fa-user"></span> Local Signup</a>
         </div>
-        <div class="col-md-4 col-sm-6 col-6">
+        <div class="col-md-4 col-sm-12 col-12">
         <a href="/auth/google" class="btn btn-danger w-100"><span class="fa fa-google-plus"></span> Google</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-12 text-center my-3">
+            <span>Send to your customer by </span>
+        </div>
+        <div class="col-md-4 col-12 col-sm-6">
+            <div class="card bg-warning text-white">
+              <div class="card-header text-center">
+                <h3>Indiviual Select</h3>
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Send to people who you want only</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-light w-100">Select</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-12 col-sm-6">
+            <div class="card bg-dark text-white">
+              <div class="card-header text-center">
+                <h3>Group Select</h3>
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Send to group who you want</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-light w-100">Select</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-12 col-sm-6">
+            <div class="card bg-info text-white">
+              <div class="card-header text-center">
+                <h3>Set Time (Coming Soon)</h3>
+                <i class="fa fa-clock"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Send to group who you want</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <div class="text-center">
+                  <a href="#" class="btn btn-light w-100">Select</a>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
 </div>
@@ -18,15 +68,18 @@
     width: 50%;
     margin: auto;
 }
+.card i {
+    font-size: 3rem;
+}
 h1.title {
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 @media (max-width:800px) {
     .login-row {
         width: 100%;
     }
     h1.title {
-    font-size: 2rem;
+    font-size: 3rem;
     }
 }
 </style>

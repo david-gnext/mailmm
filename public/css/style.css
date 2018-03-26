@@ -15,10 +15,9 @@ form {
 .w-100 {
 	width: 100%;
 }
-.container {
+.container-fluid {
 	width: 100%;
-	margin-top: 10vh;
-	padding:10rem;
+	padding:3rem;
 }
 input,button {
 	width: 80%;
