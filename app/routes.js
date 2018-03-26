@@ -3,8 +3,8 @@ module.exports = function(app, passport) {
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
-    app.get('/', function(req, res) {
-        res.render('index.ejs'); // load the index.ejs file
+    app.get('/', isAuthUser,function(req, res) {
+        res.render('index.ejs',{layout: 'header'}); // load the index.ejs file
     });
 
     // =====================================
@@ -14,7 +14,7 @@ module.exports = function(app, passport) {
     app.get('/login', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('login.ejs', { message: req.flash('loginMessage') }); 
+        res.render('login.ejs', { message: req.flash('loginMessage'),layout: 'header'}); 
     });
 
     // process the login form
@@ -27,7 +27,7 @@ module.exports = function(app, passport) {
     app.get('/signup', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('signup.ejs', { message: req.flash('signupMessage') });
+        res.render('signup.ejs', { message: req.flash('signupMessage'),layout: 'header' });
     });
 
     // process the signup form
@@ -40,7 +40,8 @@ module.exports = function(app, passport) {
     // we will use route middleware to verify this (the isLoggedIn function)
     app.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile.ejs', {
-            user : req.user // get the user out of session and pass to template
+            user : req.user, // get the user out of session and pass to template,
+            layout: 'header'
         });
     });
 
@@ -81,7 +82,12 @@ module.exports = function(app, passport) {
         failureFlash : true // allow flash messages
     }));
 };
-
+// redirect dashboard if authenticated user
+function isAuthUser(req, res, next) {
+    if( req.isAuthenticated())
+        return res.redirect('/profile');
+    return next();
+}
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 

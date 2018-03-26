@@ -1,19 +1,35 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+	background: url('../img/login.jpg');
+	background-size: cover;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
 fieldset {
 	border: 0;
 }
 form {
 	text-align: center;
 }
+.w-100 {
+	width: 100%;
+}
 .container {
 	width: 100%;
+	margin-top: 10vh;
+	padding:10rem;
 }
 input,button {
 	width: 80%;
 	margin: auto;
 	padding:1rem 2.5rem;
 }
-button {
-	margin-top:2rem;
-	border: 1px solid cyan;
+.btn {
+	border-radius: 0;
+	padding: 1rem 2rem;
 	cursor: pointer;
+}
+.text-cap {
+	text-transform: capitalize;
 }

@@ -1,27 +1,32 @@
-<!-- views/index.ejs -->
-<!doctype html>
-<html>
-<head>
-    <title>Node Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <style>
-        body        { padding-top:80px; }
-    </style>
-</head>
-<body>
+<h1 class="text-center text-info text-cap title"><span class="fa fa-envelope"></span> Mailing your customer faster and easier </h1>
 <div class="container">
-
-    <div class="jumbotron text-center">
-        <h1><span class="fa fa-lock"></span> Node Authentication</h1>
-
+    <div class="text-center row login-row">
         <p>Login or Register with:</p>
-
-        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
-         <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+        <div class="col-md-4 col-sm-6 col-6">
+        <a href="/login" class="btn btn-default w-100"><span class="fa fa-user"></span> Local Login</a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+        <a href="/signup" class="btn btn-default w-100"><span class="fa fa-user"></span> Local Signup</a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6">
+        <a href="/auth/google" class="btn btn-danger w-100"><span class="fa fa-google-plus"></span> Google</a>
+        </div>
     </div>
-
 </div>
-</body>
-</html>
+<style>
+.login-row {
+    width: 50%;
+    margin: auto;
+}
+h1.title {
+    padding-top: 10rem;
+}
+@media (max-width:800px) {
+    .login-row {
+        width: 100%;
+    }
+    h1.title {
+    font-size: 2rem;
+    }
+}
+</style>
