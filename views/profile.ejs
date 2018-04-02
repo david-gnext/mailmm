@@ -9,7 +9,7 @@
     <div class="row">
 
         <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
+        <!-- <div class="col-sm-6">
             <div class="well">
                 <h3><span class="fa fa-user"></span> Local</h3>
 
@@ -20,9 +20,9 @@
                     </p>
 
             </div>
-        </div>
+        </div> -->
          <!-- GOOGLE INFORMATION -->
-        <div class="col-sm-6">
+        <!-- <div class="col-sm-6">
             <div class="well">
                 <h3 class="text-danger"><span class="fa fa-google-plus"></span> Google</h3>
 
@@ -30,11 +30,21 @@
                         <strong>id</strong>: <%= user.google.id %><br>
                         <strong>token</strong>: <%= user.google.token %><br>
                         <strong>email</strong>: <%= user.google.email %><br>
-                        <strong>name</strong>: <%= user.google.name %>
+                        <strong>name</strong>: <%= user.google.name %><br>
                     </p>
 
             </div>
-        </div>
+        </div>  -->
+
+        <% for (var i = 0; i < mm.length; i ++) { %>
+          <div class="col-sm-6 my-2" style="max-width:100%;">
+            <div class="well card p-2">
+              <%- mm[i] %>
+            </div>
+          </div>
+        <%
+        }
+        %>
 
     </div>
 
