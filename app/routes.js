@@ -44,15 +44,19 @@ module.exports = function(app, passport) {
           var gmail = new Gmail(req.user.google.token)
           , s = gmail.messages('label:inbox', {max: 10}), data = [];
 
-        s.on('data', function(d) {
-          data.push(getHtml(d));
-        });
-        s.on('end', function() {
-          res.render('profile.ejs', {
-                  user : req.user, // get the user out of session and pass to template,
-                  mm: data,
-                  layout: 'header'
-              });
+        // s.on('data', function(d) {
+        //   data.push(getHtml(d));
+        // });
+        // s.on('end', function() {
+        //   res.render('profile.ejs', {
+        //           user : req.user, // get the user out of session and pass to template,
+        //           mm: data,
+        //           layout: 'header'
+        //       });
+        // });
+        res.render('profile.ejs', {
+                user : req.user, // get the user out of session and pass to template,
+                layout: 'header'
         });
     });
 

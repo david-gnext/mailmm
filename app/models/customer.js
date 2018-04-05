@@ -3,12 +3,11 @@
 var mongoose = require('mongoose');
 
 // define the schema for our user model
-var userSchema = mongoose.Schema({
-    id  : String,
+var customerSchema = mongoose.Schema({
     name : String,
     email: String,
-    type: String,
-    userid: String
+    group: {type: mongoose.Schema.Types.ObjectId, ref: 'Group'},
+    users: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 });
 
 // // methods ======================
@@ -23,4 +22,4 @@ var userSchema = mongoose.Schema({
 // };
 
 // create the model for users and expose it to our app
-module.exports = mongoose.model('Customer', userSchema);
+module.exports = mongoose.model('Customer', customerSchema);
