@@ -1,52 +1,72 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Mailmm</a>
 
-<div class="container-fluid">
-
-    <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <div class="dropdown navbar-text" id="user_dropdown">
+        <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+      </div>
     </div>
-
-    <div class="row">
-
-        <!-- LOCAL INFORMATION -->
-        <!-- <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
-
-                    <p>
-                        <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
-                    </p>
-
-            </div>
-        </div> -->
-         <!-- GOOGLE INFORMATION -->
-        <!-- <div class="col-sm-6">
-            <div class="well">
-                <h3 class="text-danger"><span class="fa fa-google-plus"></span> Google</h3>
-
-                    <p>
-                        <strong>id</strong>: <%= user.google.id %><br>
-                        <strong>token</strong>: <%= user.google.token %><br>
-                        <strong>email</strong>: <%= user.google.email %><br>
-                        <strong>name</strong>: <%= user.google.name %><br>
-                    </p>
-
-            </div>
-        </div>  -->
-
-        <!-- <%# for (var i = 0; i < mm.length; i ++) { %>
-          <div class="col-sm-6 my-2" style="max-width:100%;">
-            <div class="well card p-2">
-              <%#- mm[i] %>
-            </div>
-          </div>
-        <%#
-        }
-        %> -->
-
-
+  </nav>
+  <div class="container-fluid">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav>
+  <div class="row m-0">
+  <div class="card text-white bg-primary mb-3 col-md-3 mr-2">
+    <div class="card-header text-center">User</div>
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
+    <div class="card-footer text-center">
+      <button class="btn">Select</button>
+    </div>
+  </div>
+  <div class="card text-white bg-info mb-3 col-md-3 mr-2">
+    <div class="card-header text-center">Group</div>
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <div class="card-footer text-center">
+      <button class="btn">Select</button>
+    </div>
+  </div>
+  </div>
+  </div>
 
-</div>
+  <style>
+  @media (min-width: 992px) {
+    .dropdown-menu {
+      left: -69px;
+    }
+  }
+  body {
+    background: #ccc;
+  }
+  </style>
