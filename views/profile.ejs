@@ -18,7 +18,7 @@
       </ul>
       <div class="dropdown navbar-text" id="user_dropdown">
         <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+          <img src="<%= user.google.img%>" />
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Action</a>
@@ -30,42 +30,71 @@
   </nav>
   <div class="container-fluid">
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <ol class="breadcrumb" id="mailmm_breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Home</li>
     </ol>
+    <div class="row m-0">
+      <div class="col-md-2 offset-md-10 p-0 text-right">
+        <button class="btn btn-sm btn-default" title="Send"><i class="fa fa-envelope text-warning"></i></button>
+      </div>
+    </div>
   </nav>
-  <div class="row m-0">
+  <div class="row m-0" id="mailmm_content">
   <div class="card text-white bg-primary mb-3 col-md-3 mr-2">
     <div class="card-header text-center">User</div>
     <div class="card-body">
-      <h5 class="card-title">Primary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title text-center">
+        <i class="fa fa-user"></i>
+      </h5>
     </div>
     <div class="card-footer text-center">
-      <button class="btn">Select</button>
+      <a class="btn btn-light dropdown-toggle" role="button" href="#action_drop_menu" id="user_drop_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Actions
+      </a>
     </div>
   </div>
   <div class="card text-white bg-info mb-3 col-md-3 mr-2">
     <div class="card-header text-center">Group</div>
     <div class="card-body">
-      <h5 class="card-title">Primary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title text-center">
+        <i class="fa fa-users"></i>
+      </h5>
     </div>
     <div class="card-footer text-center">
-      <button class="btn">Select</button>
+      <div class="dropdown">
+        <a class="btn btn-light dropdown-toggle" role="button" href="#action_drop_menu" id="group_drop_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Actions
+        </a>
+      </div>
     </div>
   </div>
   </div>
   </div>
-
+  <div class="dropdown" id="action_drop_menu">
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">List</a>
+      <a class="dropdown-item" href="#">Create</a>
+      <a class="dropdown-item" href="#">Send</a>
+    </div>
+  </div>
   <style>
   @media (min-width: 992px) {
-    .dropdown-menu {
+    #user_dropdown .dropdown-menu {
       left: -69px;
     }
   }
+#navbarDropdownMenuLink:hover {
+  text-decoration: none;
+}
+.card-title .fa {
+  font-size: 5rem;
+}
+.fa-envelope {
+  transform: scale(2);
+}
+#action_drop_menu {
+  position: inherit !important;
+}
   body {
     background: #ccc;
   }

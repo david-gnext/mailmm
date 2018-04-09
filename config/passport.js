@@ -56,13 +56,13 @@ module.exports = function(passport) {
 
                 if (user) {
                     user.google.token = token;
+                    user.google.img = profile.photos[0].value;
                     user.save();
                     // if a user is found, log them in
                     return done(null, user);
                 } else {
                     // if the user isnt in our database, create a new user
                     var newUser          = new User();
-
                     // set all of the relevant information
                     newUser.google.id    = profile.id;
                     newUser.google.token = token;

@@ -1,4 +1,5 @@
 var Gmail = require('node-gmail-api');
+var Customer            = require('../app/models/customer');
 
 module.exports = function(app, passport) {
 
@@ -31,7 +32,27 @@ module.exports = function(app, passport) {
         // render the page and pass in any flash data if it exists
         res.render('signup.ejs', { message: req.flash('signupMessage'),layout: 'header' });
     });
-
+    // create user forms
+    app.get('/create', isLoggedIn, function(req, res) {
+      // render the page and pass in any flash data if it exists
+      res.render('create.ejs');
+    });
+    app.post('/create', function(req, res) {
+      // var c = new Customer();
+      // c.name = req.body.name;
+      // c.email = req.body.email;
+      // c.users = req.user['_id'];
+      // c.save(function(err) {
+      //     if (err)
+      //         throw err;
+      //     res.json(c);
+      // });
+      Customer.find({users:req.user['_id']})
+              .populate('users')
+              .exec(function(err,user) {
+                console.log(user[0].users.google);
+              })
+    });
     // process the signup form
     // app.post('/signup', do all our passport stuff here);
 
